@@ -9,9 +9,9 @@ Sobre o repositório
 1 - analisando o código de da página de login
 
 o arquivo login.htm é o código montado na página. esse código é carregado na raiz. não existe uma página de redirecionamento. 
-o arquibo sysreboot.htm é o arquivo que possui um script que solicita confirmação a caixa de diálogo pode ser vista em login conf.jpg
+o arquivo sysreboot.htm é o arquivo que possui um script que solicita confirmação a caixa de diálogo pode ser vista em login conf.jpg
 
-Códigos python
+2- Códigos python
 
 o arquivo tplinkreboot v3 é o arquivo que estou trabalhando. eu obtenho resposta da autenticação (200) porém ao abrir o site eu não consigo fazer com que a página de reboot passe da confirmação de download gerada pelo script. 
 
