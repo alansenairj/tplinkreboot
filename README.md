@@ -21,4 +21,6 @@ Os outros códigos foram implementações usadas em outros equipamentos com outr
 o endereço do emulador é: 
 https://emulator.tp-link.com/TL-WR1043ND/Index.htm
 
-
+segui usando os snipets da página da lib
+https://docs.python-requests.org/pt_BR/latest/user/quickstart.html
+https://docs.python-requests.org/en/master/user/authentication/
