@@ -1,26 +1,46 @@
-# tplinkreboot
+# TP Link Router Reboot Tool
+Tool to reboot TP Link routers.
 
-Descrição
+Project forked from: https://github.com/alansenairj/tplinkreboot
 
-programa para rebootar roteadores TPLINKs via requests http. Essa necessidade foi pensada, pois o firmware original não possui opção para reboot programado. A ideia é utilizar um raspberry pi executando esse código no crontab. Essa necessidade se deu em função do roteador AP travar com intermitência devido a link de 100 Mbit contratado pela operadora.
+# Usage
+```bash
+Usage:
+  tplinkreboot.py (--ip=<ip> --user=<user> --password=<password>) | (--config=<config>)
+  tplinkreboot.py -h | --help | --version
 
-Sobre o repositório
+Options:
+  --ip<ip>                  Router ip address
+  --user<user>              Router username
+  --password<password>      Router password
+  --config<config>          Configuration file with ip and credentials
+  -h --help                 Show the help
+```
 
-1 - analisando o código de da página de login e reboot
+The router ip address can be specified using a config file in yaml using `--config` or providing ip address, user name and password using `--ip=<ip> --user=<user> --password=<password>`
 
-- o arquivo login.htm é o código montado na página. esse código é carregado na raiz. não existe uma página de redirecionamento. 
-- o arquivo sysreboot.htm é o arquivo que possui um script que solicita confirmação a caixa de diálogo pode ser vista em login conf.jpg
-- o arquivo common.js é carregado ao se executar o botão "reboot"
+## Config file sample:
+Example file in config/config.yaml
 
-2- Códigos python
+```yaml
+---
+ip: 192.168.1.1
+user: admin
+password: admin
+```
 
-o arquivo tplinkreboot v3 é o arquivo que estou trabalhando. eu obtenho resposta positiva da autenticação (200) porém ao abrir o site eu não consigo fazer com que a página de reboot passe da confirmação de download gerada pelo script. 
+## Usage example:
+> Executing the script directly
+```
+./tplinkreboot.py --ip=192.168.1.1 --user=admin --password=admin
+```
 
-Os outros códigos foram implementações usadas em outros equipamentos com outras páginas e mecanismos de entrada que não deram certo. 
+> Executing using python
+```
+python3 tplinkreboot.py --ip=192.168.1.1 --user=admin --password=admin
+```
 
-o endereço do emulador é: 
-https://emulator.tp-link.com/TL-WR1043ND/Index.htm
-
-segui usando os snipets da página da lib
-https://docs.python-requests.org/pt_BR/latest/user/quickstart.html
-https://docs.python-requests.org/en/master/user/authentication/
+> Executing using config file
+```
+python3 tplinkreboot.py --config=config/config.yaml
+```
