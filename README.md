@@ -3,6 +3,14 @@ Tool to reboot TP Link routers.
 
 Project forked from: https://github.com/alansenairj/tplinkreboot
 
+# Requirements
+* Python 3.8
+* Python modules: docopt, pyyaml, requests
+
+```
+pip install -r requirements.txt
+```
+
 # Usage
 ```bash
 Usage:
