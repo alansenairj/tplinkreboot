@@ -44,3 +44,6 @@ python3 tplinkreboot.py --ip=192.168.1.1 --user=admin --password=admin
 ```
 python3 tplinkreboot.py --config=config/config.yaml
 ```
+
+# TP Link Emulator
+https://emulator.tp-link.com/TL-WR1043ND/Index.htm
